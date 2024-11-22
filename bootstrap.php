@@ -1,5 +1,5 @@
 <?php
-use Zend\Mvc\Application;
+use Laminas\Mvc\Application;
 chdir(__DIR__);
 require 'vendor/autoload.php';
 return Application::init(array(

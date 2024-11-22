@@ -2,8 +2,8 @@
 namespace Yalesov\Cron;
 
 use Yalesov\Yaml\Yaml;
-use Zend\EventManager\Event;
-use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
+use Laminas\EventManager\Event;
+use Laminas\ModuleManager\Feature\AutoloaderProviderInterface;
 
 /**
  * Cron module
@@ -16,7 +16,7 @@ class Module implements AutoloaderProviderInterface
   public function getAutoloaderConfig()
   {
     return array(
-      'Zend\Loader\StandardAutoloader' => array(
+      'Laminas\Loader\StandardAutoloader' => array(
         'namespaces' => array(
           __NAMESPACE__ => __DIR__,
         ),

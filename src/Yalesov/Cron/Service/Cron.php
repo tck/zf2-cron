@@ -226,12 +226,11 @@ class Cron
         $job
           ->setStatus(Repository\Job::STATUS_SUCCESS)
           ->setFinishTime(new \DateTime);
-
-      } catch (\Exception $e) {
-        $job
-          ->setStatus($errorStatus)
-          ->setErrorMsg($e->getMessage())
-          ->setStackTrace($e->getTraceAsString());
+      } catch (\Throwable $e) {
+          $job
+              ->setStatus($errorStatus)
+              ->setErrorMsg($e->getMessage())
+              ->setStackTrace($e->getTraceAsString());
       }
 
       $em->persist($job);

@@ -2,9 +2,9 @@
 namespace Yalesov\Cron\Controller;
 
 use Yalesov\BackgroundExec\BackgroundExec;
-use Zend\Console\Request as ConsoleRequest;
-use Zend\Console\Response as ConsoleResponse;
-use Zend\Mvc\Controller\AbstractActionController;
+use Laminas\Console\Request as ConsoleRequest;
+use Laminas\Console\Response as ConsoleResponse;
+use Laminas\Mvc\Controller\AbstractActionController;
 
 /**
  * Cron controller
